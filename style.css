@@ -140,19 +140,42 @@ body {
     height: 100%;
     background-color: #f9f9f9;
     border-top: 1px solid #cccccc;
+    overflow-y: scroll;
 }
 .video-grid {
     display: flex;
+    flex-wrap: wrap;
     padding: 15px;
 }
 .video {
     margin-right: 10px;
-    background-color: yellow;
-    width: calc(25%);
+    width: calc(25% - 12px);
+    cursor: pointer;
+    margin-bottom: 35px;
 }
 .video .thumbnail img {
     width: 100%;
 }
 .video .details {
     display: flex; 
+    margin-top: 5px;
+    width: 90%;
+}
+.video .profile {
+    margin-right: 12px;
+}
+.video .profile img {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+.video .video-details p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.video .posted-by {
+    font-size: 14px;
+    font-weight: 500;
+    color: #606060;
 }
