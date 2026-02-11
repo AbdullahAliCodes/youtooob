@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
 }
 
 /* ALL NAV BAR STYLING */
@@ -11,10 +16,14 @@
     justify-content: space-between;
     height: 56px;
     padding: 0 16px;
+    position: sticky;
+    top: 0px;
+    background: white;
 }
 .navbar .logo {
     display: flex;
     align-items: center;
+    margin-left: 8px;
 }
 .navbar .logo img {
     width: 110px;
@@ -24,7 +33,7 @@
     display: flex;
     align-items: center;
 }
-.search {
+.search { 
     display: flex;
     border: 1px solid #cccccc;
     width: 600px;
@@ -55,12 +64,27 @@
 .mainbody {
     display: flex;
     height: calc(100vh - 56px);
+    overflow: hidden;
 }
 
 .categories {
     width: 240px;
     height: 100%;
     background-color: white;
+    overflow-y: scroll;
+}
+.category-section {
+    border-bottom: 1px solid #cccccc;
+    margin-top: 10px;
+}
+.category-section .category:last-child {
+    margin-bottom: 10px;
+}
+.category-heading {
+    margin: 10px 0px 10px 25px;
+    color: #606060;
+    font-size: 14px;
+    font-weight: 500;
 }
 .category {
     width: 100%;
@@ -69,16 +93,36 @@
     height: 40px;
     padding: 0px 24px;
     font-size: 14px;
+    font-weight: 400;
     cursor: pointer;
 }
 .category:hover{
     background: #f9f9f9;
 }
 .category i {
-    margin-right: 20px;
+    margin-right: 24px;
+}
+.categories-footer {
+    margin: 5px;
+}
+.footer-section {
+    margin-bottom: 12px;
+}
+.footer-section span {
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 4px;
+    color: #606060;
+}
+.copyright {
+    color: #606060;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 25px;
 }
 .active {
     background: #d0d0d0;
+    font-weight: 500;
 }
 .active i {
     color: #ff0000;
@@ -87,9 +131,28 @@
     background: #d0d0d0;
 }
 
+.footer-section {
+    margin: 25px;
+}
+
 .videos {
     width: calc(100vw - 240px);
     height: 100%;
     background-color: #f9f9f9;
     border-top: 1px solid #cccccc;
+}
+.video-grid {
+    display: flex;
+    padding: 15px;
+}
+.video {
+    margin-right: 10px;
+    background-color: yellow;
+    width: calc(25%);
+}
+.video .thumbnail img {
+    width: 100%;
+}
+.video .details {
+    display: flex; 
 }
