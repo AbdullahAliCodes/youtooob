@@ -37,6 +37,7 @@ body {
     display: flex;
     border: 1px solid #cccccc;
     width: 600px;
+    height: 100%;
     margin-right: 10px;
 }
 .search input {
@@ -49,6 +50,9 @@ body {
     border-left: 1px solid #cccccc;
     width: 10%;
     padding: 2px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .navigation-icons {
     display: flex;
